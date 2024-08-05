@@ -198,9 +198,11 @@ function Dialog() {
             <i className="extra"><MoreCircle20Regular /></i>
         </button>
 
-        <dialog className={`${css.dialog} modal no-padding`} id="pane">
+        <dialog className={`${css.dialog} modal no-padding blur`} id="pane">
           <section className='right-align medium-padding'>
-            <button data-ui="#pane" className='circle transparent'><Dismiss20Regular /></button>
+            <button data-ui="#pane" className='circle transparent'>
+              <Dismiss20Regular />
+            </button>
           </section>
           <div className='divider'></div>
           <nav className={`${css.flexbox} padding`}>
@@ -239,7 +241,4 @@ export default {
   Requisition,
   Overview,
   Dialog,
-   People, 
-   Task, 
-   Inbox,  
-   Setting}
+  }

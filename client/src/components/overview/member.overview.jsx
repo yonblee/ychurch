@@ -5,18 +5,24 @@ import RowCard from '@components/cards/row.card'
 
 let membership = {
   title: "Church Membership",
-  text: "4,500",
+  text: "21,300",
   info: '+25K% increase',
   footer: "previous 365 days."
 }
+
+let Gender = [
+  {icon: "woman", prop: "Female", value: "10400"},
+  {icon: "man", prop: "Male", value: "9300"},
+  {icon: "children", prop: "Children", value: "300"},
+  {icon: "others", prop: "Youths", value: "1300"},
+]
 
 
 function MemberOverview() {
   return (
     <div className={`${css.grid} ${css.max} small-padding`}>
-      {/* <TextCard appearance={"wider"}/> */}
       <TextCard details={membership}/>
-      <RowCard />
+      <RowCard title={"Gender"} details={Gender} />
     </div>
   )
 }
