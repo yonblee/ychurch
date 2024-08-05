@@ -1,0 +1,5 @@
+.fullbleed {
+    width: 99.98vw;
+    height: 99.98vh;
+    overflow-y: auto;
+}

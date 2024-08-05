@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    min-height: 50vh;
+    background-color: var(--on-primary-container);
+    color: var(--tertiary-container);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    gap: 12px;
+}
+
+.header > p {
+    font-size: 1.5rem;
+    max-width: 50vw;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+
+.notice {
+    background-color: var(--color-3);
+    font-size: larger;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.flexrow {
+    display: flex;
+}
+
+.flexrow > * {
+    flex: 1;
+    min-height: 350px;
+    min-width: 450px;
+}
+
+table {
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+  }
+
+tr td:nth-child(2), .flexrow >:nth-child(2) {
+    background-color: #d9e9f5;
+}
+
+.highlight {
+    background-color: var(--color-3);
+}
+
+.benefits {
+    background-color: var(--tertiary-container);
+}
+
+.flexitems {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 12px;
+}
+
+.item {
+    width: calc(1150px / 3);
+    min-height: 245px;
+    border: solid red;
+}
+
+.logo {
+    max-width: 192px;
+}

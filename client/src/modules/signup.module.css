@@ -1,0 +1,27 @@
+.flexbox {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.container, .gridbox {
+    background: var(--blue-gradient);
+    min-height: 99.98vh;
+    place-items: center;
+}
+
+.form {
+    width: 470px;
+}
+
+.foreground {
+    width: 90%;
+    height: 350px;
+    border-radius: 13px;
+    outline: 15px solid #ffffff4d;
+    margin-left: 12px;
+}
+
+.logo {
+    width: 290px;
+}

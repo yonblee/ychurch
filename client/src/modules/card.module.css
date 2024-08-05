@@ -1,0 +1,45 @@
+.card {
+    min-width: 290px;
+    min-height: 192px;
+    display: flex;
+    flex-direction: column;
+
+    & > .section {
+        flex: 2;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4px;
+
+        & > .large {
+            font-size: 3rem;
+        }
+        & > .info {
+            display: inline-block;
+            padding: 5px;
+            border-radius:23px;
+            background-color: var(--color-4a);
+            min-width: 86px;
+            min-height: 23px;
+            font-weight: bold;
+            font-size: large;
+            /* color: var(--color-4a); */
+        }
+    }
+    & > .footer {
+        margin-top: auto;
+    }
+}
+
+.wide {
+    grid-column: 1/3;
+}
+
+.wider {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+
+.tall {
+    grid-row: 1/3;
+}

@@ -1,0 +1,41 @@
+:root {
+    --site-blue:  #0339f8;
+    --color-1: #ef5350;
+    --color-1a: #ef535080;
+    --color-1b: #ef535000;
+    --color-2: #ffffff;
+    --color-2a: #ffffff10;
+    --color-2b: #ffffff20;
+    --color-3: #ff9800;
+    --color-4: #263238;
+    --color-4a: rgba(55, 71, 79, 0.9);
+    --color-5: #212121;
+    --blue-gradient: linear-gradient(to bottom right, #b187e9e0, #5f8fe785, #d490c963);
+}
+
+
+.is-netflix {
+    --color-1: #ef5350;
+    --color-1a: #ef535080;
+    --color-1b: #ef535000;
+    --color-2: #ffffff;
+    --color-2a: #ffffff10;
+    --color-2b: #ffffff20;
+    --color-3: #ff9800;
+    --color-4: #263238;
+    --color-4a: rgba(55, 71, 79, 0.9);
+    --color-5: #212121;
+  }
+
+.wrapper {
+    width: 99.98vw;
+    height: 99.98vh;
+  }
+
+  .fullbleed {
+    width: 99.98vw;
+    height: 99.98vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid red;
+  }
