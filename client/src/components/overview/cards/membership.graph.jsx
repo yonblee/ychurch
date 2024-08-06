@@ -5,7 +5,7 @@ import css from "@modules/card.module.css"
 function MembershipGraph() {
   return (
     <article className={`${css.gc24gr13} `}>
-        <header className={`fixed`}>
+        <header className={``}>
             <h5>Membership Graph</h5>
         </header>
     </article>

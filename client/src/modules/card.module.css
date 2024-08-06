@@ -63,9 +63,18 @@
     grid-row: 1/3;
 }
 
+.gc13 {
+    grid-column: 1/3;
+}
+
 
 /* ENDS*/
 
 .bbottom {
     border-bottom: thin solid var(--secondary);
+}
+
+.full {
+    min-height: inherit;
+    min-height: 228px;
 }

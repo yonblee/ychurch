@@ -4,6 +4,7 @@ import css from "@modules/overview.module.css"
 import RowCard from '@components/overview/cards/row.card'
 import MembershipCard from './cards/membership.card'
 import MembershipGraph from './cards/membership.graph'
+import DemographCard from './cards/demograph.card'
 
 let membership = {
   title: "Church Membership",
@@ -25,6 +26,7 @@ function MemberOverview() {
     <div className={`${css.grid} ${css.max} small-padding`}>
       <MembershipCard appearance={"tall"} />
       <MembershipGraph />
+      <DemographCard />
     </div>
   )
 }
