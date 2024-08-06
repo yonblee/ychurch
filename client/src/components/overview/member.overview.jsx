@@ -2,6 +2,8 @@ import TextCard from '@components/overview/cards/text.card'
 import React from 'react'
 import css from "@modules/overview.module.css"
 import RowCard from '@components/overview/cards/row.card'
+import MembershipCard from './cards/membership.card'
+import MembershipGraph from './cards/membership.graph'
 
 let membership = {
   title: "Church Membership",
@@ -21,14 +23,8 @@ let Gender = [
 function MemberOverview() {
   return (
     <div className={`${css.grid} ${css.max} small-padding`}>
-      <TextCard appearance={"tall"} details={membership}/>
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
-      <RowCard title={"Gender"} details={Gender} />
+      <MembershipCard appearance={"tall"} />
+      <MembershipGraph />
     </div>
   )
 }
