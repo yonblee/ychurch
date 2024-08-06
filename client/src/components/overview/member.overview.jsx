@@ -5,6 +5,7 @@ import RowCard from '@components/overview/cards/row.card'
 import MembershipCard from './cards/membership.card'
 import MembershipGraph from './cards/membership.graph'
 import DemographCard from './cards/demograph.card'
+import DonationCard from './cards/donation.card'
 
 let membership = {
   title: "Church Membership",
@@ -27,6 +28,7 @@ function MemberOverview() {
       <MembershipCard appearance={"tall"} />
       <MembershipGraph />
       <DemographCard />
+      <DonationCard />
     </div>
   )
 }

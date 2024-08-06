@@ -54,6 +54,7 @@
 -first num after gc/gr = start
 -second num after gc/gr - end
 */
+
 .gc24gr13 {
     grid-column: 2/4;
     grid-row: 1/3;
