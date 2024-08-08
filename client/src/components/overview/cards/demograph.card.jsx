@@ -1,6 +1,4 @@
-import React from 'react'
 import css from "@modules/card.module.css"
-
 
 function DemographCard() {
   return (

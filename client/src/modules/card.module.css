@@ -79,3 +79,9 @@
     min-height: inherit;
     min-height: 228px;
 }
+
+.center {
+    display: grid;
+    place-items: center;
+    min-height: 400px;
+}

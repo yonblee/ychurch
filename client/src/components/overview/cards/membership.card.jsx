@@ -1,7 +1,6 @@
-import React from 'react'
 import css from "@modules/card.module.css"
 
-function MembershipCard({appearance}) {
+function MembershipCard() {
   return (
     <article className={`${css.gr13}`}>
         <section>
