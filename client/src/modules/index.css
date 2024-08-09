@@ -1,0 +1,9 @@
+:root {
+    height: 100%;
+}
+
+
+body {
+    height: inherit;
+    margin: 0;
+}
