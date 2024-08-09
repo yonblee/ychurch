@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppRoutes from "./routes";
 
+const router = createBrowserRouter(AppRoutes)
 function App() {
 
   return (
-    <>
-      <h1>hello ychurch</h1>
-    </>
+    <RouterProvider router={router} />
   );
 }
 
