@@ -1,0 +1,56 @@
+import { createTheme } from "@fluentui/react";
+
+export const darkTheme = createTheme({
+  palette: {
+    themePrimary: "#0fd46c",
+    themeLighterAlt: "#f4fdf8",
+    themeLighter: "#d3f8e4",
+    themeLight: "#aef2ce",
+    themeTertiary: "#65e5a1",
+    themeSecondary: "#27d97a",
+    themeDarkAlt: "#0dbe60",
+    themeDark: "#0ba151",
+    themeDarker: "#08773c",
+    neutralLighterAlt: "#37383c",
+    neutralLighter: "#36373b",
+    neutralLight: "#343538",
+    neutralQuaternaryAlt: "#313234",
+    neutralQuaternary: "#2e2f32",
+    neutralTertiaryAlt: "#2d2d30",
+    neutralTertiary: "#c8c8c8",
+    neutralSecondary: "#d0d0d0",
+    neutralPrimaryAlt: "#dadada",
+    neutralPrimary: "#ffffff",
+    neutralDark: "#f4f4f4",
+    black: "#f8f8f8",
+    white: "#393a3d",
+  },
+});
+
+export const lightTheme = createTheme({
+  palette: {
+    themePrimary: "#0a8543",
+    themeLighterAlt: "#f1faf5",
+    themeLighter: "#c9ebd9",
+    themeLight: "#9edaba",
+    themeTertiary: "#51b680",
+    themeSecondary: "#1c9354",
+    themeDarkAlt: "#0a773d",
+    themeDark: "#086533",
+    themeDarker: "#064a26",
+    neutralLighterAlt: "#ffffff",
+    neutralLighter: "#ffffff",
+    neutralLight: "#ffffff",
+    neutralQuaternaryAlt: "#ffffff",
+    neutralQuaternary: "#ffffff",
+    neutralTertiaryAlt: "#ffffff",
+    neutralTertiary: "#595959",
+    neutralSecondary: "#373737",
+    neutralPrimaryAlt: "#2f2f2f",
+    neutralPrimary: "#000000",
+    neutralDark: "#151515",
+    black: "#0b0b0b",
+    white: "#ffffff",
+  },
+});
+
