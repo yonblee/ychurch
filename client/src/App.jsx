@@ -6,18 +6,7 @@ import { useState, useEffect } from "react";
 
 const router = createBrowserRouter(AppRoutes);
 function App() {
-  const [mode, setMode] = useState(false);
-
-  function handleTheme() {
-    setMode(!mode);
-    window.localStorage.setItem("mode", mode);
-  }
-
-  useEffect(() => {
-    let mode = Boolean(window.localStorage.getItem("mode"));
-    setMode(mode);
-  }, []);
-
+  const [mode, setMode] = useState(true);
   return (
     <ThemeProvider theme={mode ? lightTheme : darkTheme} applyTo="body">
       <RouterProvider router={router} />
