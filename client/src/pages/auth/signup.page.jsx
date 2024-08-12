@@ -6,45 +6,42 @@ import {
   Input,
   tokens,
   Button,
+  Text,
 } from "@fluentui/react-components";
+import useStyles from "./auth.styles";
 
-var useStyles = makeStyles({
-  container: {
-    height: "98.98vh",
-    display: "grid",
-    gap: "16px",
-    placeContent: "center",
-    placeItems: "center",
-  },
-  card: {
-    width: "280px",
-    height: "fit-content",
-    boxShadow: "var(--bs-xl)",
-    borderRadius: tokens.borderRadiusCircular
-  },
-  logo: {
-    width: "78px",
-  },
-});
 const SignupPage = () => {
   let styles = useStyles();
+
   return (
     <div className={styles.container}>
-      <img
-        className={mergeClasses(styles.logo)}
-        src="/logo_sample.png"
-        alt="Logo Sample"
-      />
-      <Card className={mergeClasses(styles.card)}>
-        <header>Header</header>
-        <form action="" method="post">
-          <Field label="Required field" required>
-            <Input />
-          </Field>
+      <img className={styles.logo} src="/logo_sample.png" alt="Logo Sample" />
+      <form action="" method="post" className={styles.form}>
+        <header>
+          <Text size={800}>Create New Account</Text>
+          <Text size={200}>to join and manage church</Text>
+        </header>
 
-          <Button appearance="primary">Register</Button>
-        </form>
-      </Card>
+        <Field label="Full Name" required>
+          <Input minLength={5} type="text" name="fullname" />
+        </Field>
+
+        <Field label="Email Address" required>
+          <Input type="email" name="email" />
+        </Field>
+
+        <Field label="Password" required>
+          <Input minLength={8} type="password" name="password" />
+        </Field>
+
+        <Field label="Church Identification Number">
+          <Input minLength={8} type="text" name="CIN" />
+        </Field>
+
+        <Button type="submit" appearance="primary">
+          Register
+        </Button>
+      </form>
     </div>
   );
 };
