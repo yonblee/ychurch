@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";;
 
-function Root() {
+function RootElem() {
     return <Outlet />
 }
 
-export default Root
+export default RootElem

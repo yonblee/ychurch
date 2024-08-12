@@ -31,6 +31,11 @@ var useStyles = makeStyles({
     padding: "12px",
     backgroundColor: tokens.colorBrandForeground1,
   },
+  flex: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  }
 });
 
 export default useStyles;

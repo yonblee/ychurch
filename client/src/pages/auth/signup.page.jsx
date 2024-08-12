@@ -39,8 +39,12 @@ const SignupPage = () => {
         </Field>
 
         <Button type="submit" appearance="primary">
-          Register
+          Create Account
         </Button>
+
+        <hr />
+
+        <Text> Already have an account <a href="/login">Log in</a> </Text>
       </form>
     </div>
   );
