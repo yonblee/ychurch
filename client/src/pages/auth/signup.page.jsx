@@ -18,11 +18,13 @@ const SignupPage = () => {
       <img className={styles.logo} src="/logo_sample.png" alt="Logo Sample" />
       <form action="" method="post" className={styles.form}>
         <header>
-          <Text size={800}>Create New Account</Text>
+          <Text as="h2" size={600} block>
+            Create New Account
+          </Text>
           <Text size={200}>to join and manage church</Text>
         </header>
 
-        <Field label="Full Name" required>
+        <Field label="Full Name" required pad>
           <Input minLength={5} type="text" name="fullname" />
         </Field>
 
@@ -45,8 +47,7 @@ const SignupPage = () => {
         <hr />
 
         <Text>
-          {" "}
-          Already have an account <a href="/login">Log in</a>{" "}
+          Already have an account <a href="/login">Log in</a>
         </Text>
       </form>
     </div>
