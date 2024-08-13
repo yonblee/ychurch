@@ -1,16 +1,20 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AppRoutes from "@routes/index";
-import { ThemeProvider } from "@fluentui/react";
-import appTheme from "@components/ui/theme.ui";
+import { FluentProvider, Switch, ToggleButton, webLightTheme, webDarkTheme} from "@fluentui/react-components";
+import AppRoutes from "@routes/app.routes";
+import { useState } from "react";
 
 const router = createBrowserRouter(AppRoutes);
 
 function App() {
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(true);
+  function handleMode() {
+    setMode(!mode)
+  }
   return (
-    <ThemeProvider theme={appTheme}>
+    <FluentProvider theme={mode ? webLightTheme : webDarkTheme}>
+      {/* <Switch onClick={handleMode} label="This is a switch"/> */}
       <RouterProvider router={router} />
-    </ThemeProvider>
+    </FluentProvider>
   );
 }
 

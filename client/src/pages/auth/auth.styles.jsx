@@ -29,7 +29,6 @@ var useStyles = makeStyles({
     boxShadow: "var(--bs-xl)",
     borderRadius: "12px",
     padding: "12px",
-    backgroundColor: tokens.colorBrandForeground1,
   },
   flex: {
     display: "flex",
