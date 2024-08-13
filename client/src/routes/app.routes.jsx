@@ -1,17 +1,13 @@
-import AuthRoutes from "./auth/auth.routes";
-import LoginRoutes from "./auth/login.routes";
-import SignupRoutes from "./auth/signup.routes";
+import LoginRoutes from "./login.routes";
+import SignupRoutes from "./signup.routes";
 import RootElem from "./root.elem";
+import AuthRoutes from "./auth.routes";
 
 const AppRoutes = [
   {
     path: "/",
     element: <RootElem />,
-    children: [
-      SignupRoutes,
-      LoginRoutes,
-      AuthRoutes
-    ]
+    children: [SignupRoutes, LoginRoutes, AuthRoutes],
   },
 ];
 export default AppRoutes;

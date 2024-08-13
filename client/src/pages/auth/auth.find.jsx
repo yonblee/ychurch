@@ -1,5 +1,6 @@
 import { Field, Input, Button, Text } from "@fluentui/react-components";
-import useStyles from "./auth.styles";
+import useStyles from "@utils/styling/auth.styles";
+
 
 const AuthFind = () => {
   let styles = useStyles();
@@ -25,7 +26,6 @@ const AuthFind = () => {
       </form>
     </div>
   );
-  
 };
 
 export default AuthFind;

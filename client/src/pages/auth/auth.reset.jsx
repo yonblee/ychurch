@@ -1,5 +1,5 @@
 import { Field, Input, Button, Text } from "@fluentui/react-components";
-import useStyles from "./auth.styles";
+import useStyles from "@utils/styling/auth.styles";
 
 const AuthReset = () => {
   let styles = useStyles();
@@ -10,7 +10,6 @@ const AuthReset = () => {
       <form action="" method="post" className={styles.form}>
         <header>
           <Text size={800}>Reset Password</Text>
-          
         </header>
 
         <Field label="New Password" required>

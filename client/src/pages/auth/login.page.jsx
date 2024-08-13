@@ -1,5 +1,6 @@
 import { Field, Input, Button, Text } from "@fluentui/react-components";
-import useStyles from "./auth.styles";
+import useStyles from "@utils/styling/auth.styles";
+
 
 const LoginPage = () => {
   let styles = useStyles();
@@ -22,12 +23,13 @@ const LoginPage = () => {
         </Field>
 
         <section className={styles.flex}>
-            <Button as="a" href="auth/find">Forget Password?</Button>
-            <Button type="submit" appearance="primary">
+          <Button as="a" href="auth/find">
+            Forget Password?
+          </Button>
+          <Button type="submit" appearance="primary">
             Log in
-            </Button>
+          </Button>
         </section>
-        
       </form>
     </div>
   );

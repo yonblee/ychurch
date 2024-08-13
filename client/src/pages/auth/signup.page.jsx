@@ -8,7 +8,7 @@ import {
   Button,
   Text,
 } from "@fluentui/react-components";
-import useStyles from "./auth.styles";
+import useStyles from "@utils/styling/auth.styles";
 
 const SignupPage = () => {
   let styles = useStyles();
@@ -44,7 +44,10 @@ const SignupPage = () => {
 
         <hr />
 
-        <Text> Already have an account <a href="/login">Log in</a> </Text>
+        <Text>
+          {" "}
+          Already have an account <a href="/login">Log in</a>{" "}
+        </Text>
       </form>
     </div>
   );
