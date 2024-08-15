@@ -9,6 +9,7 @@ import {
   Text,
 } from "@fluentui/react-components";
 import useStyles from "@utils/styling/auth.styles";
+import css from "@modules/generic.module.css"
 
 const SignupPage = () => {
   let styles = useStyles();
@@ -17,14 +18,14 @@ const SignupPage = () => {
     <div className={styles.container}>
       <img className={styles.logo} src="/logo_sample.png" alt="Logo Sample" />
       <form action="" method="post" className={styles.form}>
-        <header>
+        <header className={css.padding}>
           <Text as="h2" size={600} block>
             Create New Account
           </Text>
           <Text size={200}>to join and manage church</Text>
         </header>
 
-        <Field label="Full Name" required pad>
+        <Field label="Full Name" required >
           <Input minLength={5} type="text" name="fullname" />
         </Field>
 

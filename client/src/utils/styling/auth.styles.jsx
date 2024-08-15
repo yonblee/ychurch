@@ -35,6 +35,7 @@ var useStyles = makeStyles({
     justifyContent: "space-between",
     alignItems: "center"
   }
+  
 });
 
 export default useStyles;
