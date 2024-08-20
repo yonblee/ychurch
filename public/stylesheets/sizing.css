@@ -85,5 +85,9 @@
 }
 
 .space {
-    padding: var(--spacing-xs);
+    padding: 4px;
+}
+
+.block {
+    display: block;
 }

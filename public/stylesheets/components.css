@@ -43,6 +43,11 @@
     border: 1px solid var(--ink);
 }
 
+.input.invalid {
+    border-color: var(--red);
+    background-color: var(--red-light);
+}
+
 .button {
     border-radius: 4px;
     border: none;

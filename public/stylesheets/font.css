@@ -89,3 +89,11 @@
 .small-line {
     line-height: 1.25;
 }
+
+.small {
+    font-size: var(--font-sm);
+}
+
+small.error {
+    font-size: var(--font-sm);
+}
