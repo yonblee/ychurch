@@ -24,17 +24,21 @@
                 <form action="" method="post" class="border-top margin-top">
 
                     <label for="fullname" class="label">Fill in the form</label>
-                    <input type="text" name="fullname" id="fullname" placeholder="Enter Full name" class="input">
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter Full name" required
+                        class="input">
 
-                    <div class="space"></div>
-                    <input type="email" name="email" id="email" placeholder="Enter Email" class="input">
+                    <label for="contact" class="label">
+                        <small class="move-right muted" id="switcher">Use Phone</small>
+                    </label>
+                    <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input">
 
                     <div class="space"></div>
                     <input type="text" name="CIN" id="CIN" placeholder="Church Identification Number" class="input">
-                    <a href="register/church">Don't have CIN?</a>
+                    <a href="help/?=CIN">Don't have CIN?</a>
 
                     <div class="space"></div>
-                    <input type="password" name="password" id="password" placeholder="Choose new password" class="input">
+                    <input type="password" name="password" id="password" placeholder="Choose password" required
+                        class="input">
 
                     <button type="submit" class="button">Register</button>
                 </form>
@@ -50,6 +54,7 @@
             <p>a Timothy T. Joe production</p>
             <p>&copy; 2024</p>
         </footer>
+        <script type="module" src="/javascripts/register.js"></script>
     </body>
 
     </html>
