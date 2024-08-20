@@ -1,8 +1,3 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import url("./variable.css");
+@import url("./reset.css");
 
-a {
-  color: #00B7FF;
-}

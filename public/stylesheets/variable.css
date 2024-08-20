@@ -1,0 +1,71 @@
+/* root.css */
+:root {
+    --navy: #001f3f;
+    --navy-light: #2c3e50;
+    --navy-dark: #00122b;
+
+    --blue: #0074D9;
+    --blue-light: #00B7FF;
+    --green: #2ECC40;
+    --yellow: #FFDC00;
+    --red: #FF4136;
+    --purple: #8b058b;
+
+    --white: #ffffff;
+    --gray-light: #f6f8fa;
+    --gray: #c0c0c0;
+    --gray-dark: #5f5f5f;
+    --black: #111111;
+
+    /* backgrounds */
+    --crimson: #fe2c55;
+    --charcoal: #1b1b1b;
+    --noir: rgba(22, 24, 35, 0.059);
+    --ink: rgba(22, 24, 35, 0.122);
+
+    /* fills */
+    --aqua: #25f4ee;
+    --midnight: #161823;
+    --shadow: rgba(22, 24, 35, 0.6);
+    --smoke: rgba(22, 24, 35, 0.341);
+    --cobalt: #2b5db9;
+    --black: #000000;
+
+    /* borders */
+    --ash: #e3e3e5;
+    --fog: rgba(22, 24, 35, 0.122);
+    --whisper: rgba(22, 24, 35, 0.031);
+
+    /* fonts */
+    --font-xxs: 0.625rem;
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-md: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-xxl: 2rem;
+    --font-xxxl: 3rem;
+
+    /* spacing,gap,margin,gutter,padding */
+    --spacing-xxs: 0.25rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 8px;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 3rem;
+    --spacing-xxxl: 4rem;
+
+    /* roundness, radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 17px;
+    --radius-xl: 24px;
+    --round: 100%;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
