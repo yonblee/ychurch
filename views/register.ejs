@@ -14,28 +14,30 @@
         </header>
         <main class="max column center">
             <section class="box mini border small-round padding">
-                <h2 class="margin-bottom">Log in</h2>
+                <h2 class="margin-bottom">Account Registration</h2>
 
-                <small class="padding-bottom">
-                    To log in, fill in the form with the email and password associated with your account.
+                <small>
+                    To create an account, add your full name, active email, church Identification number (CIN), and
+                    choose a password.
                 </small>
 
                 <form action="" method="post" class="border-top margin-top">
 
-                    <label for="email" class="label">Fill in the form</label>
+                    <label for="fullname" class="label">Fill in the form</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter Full name" class="input">
+
+                    <div class="space"></div>
                     <input type="email" name="email" id="email" placeholder="Enter Email" class="input">
 
                     <div class="space"></div>
-                    <input type="password" name="password" id="password" placeholder="Enter password" class="input">
-                    <a href="account/find">Forget your password?</a>
+                    <input type="text" name="CIN" id="CIN" placeholder="Church Identification Number" class="input">
+                    <a href="register/church">Don't have CIN?</a>
 
-                    <button type="submit" class="button">Log in</button>
+                    <div class="space"></div>
+                    <input type="password" name="password" id="password" placeholder="Choose new password" class="input">
 
+                    <button type="submit" class="button">Register</button>
                 </form>
-                <section class="padding-top">
-                    Don't have an account? <a href="/register">Create new account.</a>
-                </section>
-
             </section>
         </main>
         <footer class="padding center-align border-top">

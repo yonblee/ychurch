@@ -73,7 +73,6 @@
     min-width: 100%;
 }
 
-
 .round {
     border-radius: 50%;
 }
@@ -83,4 +82,8 @@
 }
 .tiny-round {
     border-radius: 2px;
+}
+
+.space {
+    padding: var(--spacing-xs);
 }
