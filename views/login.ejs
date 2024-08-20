@@ -1,19 +1,71 @@
-<!DOCTYPE html>
-<html>
+<%- include("./partial/head") %>
 
-<head>
-    <title>
-        <%= title %>
-    </title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+    <body class="row">
+        <aside class="pane full padding border-right">
+            <label for="email" class="label">Email</label>
+            <input type="email" name="email" id="email" class="input">
 
-<body>
-    <h1>
-        <%= title %>
-    </h1>
-    <p>Welcome to <a href=""><%= title %></a> 
-    </p>
-</body>
+            <label for="password" class="label">Password</label>
+            <input type="password" name="password" id="password" class="input">
+            <a href="/account/find" class="padding-top">Forget password?</a>
+            <section class="row between">
+                <button class="button">Login</button>
+            </section>
+        </aside>
+        <main class="max">
+            <header class="row padding align border-bottom">
+                <span class="max">
+                    <a href="/" class="logo text">yChurch</a>
+                </span>
+                <span class="row linklist">
+                    <a href="/login">Login</a>
+                    <a href="/register">Register</a>
+                    <a href="/about">About</a>
+                    <a href="/hep">Help</a>
+                </span>
+            </header>
+            <section class="breadcrumb padding medium">
+                Welcome to yChurch
+            </section>
+            <section class="row align">
+                <section class="max padding">
+                    <h3 class="larger bold">
+                        yChurch is an online church management system that provide smart
+                        solutions for everyday church
+                        activities.
+                    </h3>
+                    <h6 class="margin-bottom medium">You can use yChurch to:</h6>
+                    <ul class="medium">
+                        <li>Manage church Membership and Inventory</li>
+                        <li>Create daily, quarterly or annual Report</li>
+                        <li>Host online meeting and send message</li>
+                        <li>Send/Recieve Invoice. Approve/Decline Requistion</li>
+                        <li>Create church online profile</li>
+                    </ul>
+                    <br>
+                    <p class="medium">
+                        yChurch is open to <a href="/help/churches">lot of churches</a>
+                        but not everywhere yet. we're working on it.
+                    </p>
+                    <br>
+                    <span class="linklist ">
+                        <a href="/login" class="link button">Log in</a>
+                        <a href="/register" class="link button">Register</a>
+                    </span>
+                </section>
+                <img class="foreground" src="/images/foreground.jpeg" alt="images">
+            </section>
+            <footer class="padding center-align border-top">
+                <span class="linklist">
+                    <a href="/about/ychurch">About Us</a>
+                    <a href="/about/ads">Advertise</a>
+                    <a href="/privacy/term">Terms</a>
+                    <a href="/privacy">Privacy</a>
+                </span>
+                <p>a Timothy T. Joe production</p>
+                <p>&copy; 2024</p>
+            </footer>
+        </main>
+    </body>
 
-</html>
+    </html>
