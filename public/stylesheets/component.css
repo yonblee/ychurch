@@ -375,3 +375,18 @@ button:disabled {
 .select:focus {
   outline: none;
 }
+
+
+/* year options */
+.tiktok-x376y3-DivOption {
+  height: 34px;
+  overflow: auto;
+  font-size: 16px;
+  padding: 0px 12px;
+  cursor: pointer;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  color: rgb(22, 24, 35);
+  background: unset;
+}
