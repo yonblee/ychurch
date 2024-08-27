@@ -1,11 +1,13 @@
 :root {
+  color-scheme: light dark;
+
   /* Background colors */
   --frost: rgba(255, 255, 255, 0.12);
   --mist: rgba(255, 255, 255, 0.08);
   --snow: #ffffff;
   --haze: rgba(255, 255, 255, 0.34);
   --veil: rgba(255, 255, 255, 0.04);
-  --rose: #ff3f5f;
+  --rose: #ff0050;
   --slate: rgba(136, 136, 136, 0.50);
   --crimson: #fe2c55;
   --ink: rgba(22, 24, 35, 0.122);
@@ -21,6 +23,7 @@
   --cloud: #f6f6f6;
   --midnight: #161823;
   --coal: #000000;
+
 
   /* Fill colors */
   --ice: #25f4ee;
@@ -46,7 +49,8 @@
 
   /* Border colors */
   --frost-border: var(--frost);
-  --light-gray: #e3e3e5;
+  --light-gray: rgba(22, 24, 35, 0.12);
+  /* --light-gray: #e3e3e5; */
   --ash: #e3e3e5;
   --light-red: rgba(255, 119, 146, 0.50);
   --rose-border: var(--rose);
@@ -153,6 +157,23 @@
 
 .border-left {
   border-left: 1px solid var(--light-gray);
+}
+
+.no-border {
+  border: unset !important;
+}
+
+.no-right {
+  border-right: unset !important;
+}
+.no-left {
+  border-left: unset !important;
+}
+.no-top {
+  border-top: unset !important;
+}
+.no-bottom {
+  border-bottom: unset !important;
 }
 
 .invalid {
@@ -381,145 +402,6 @@
   color: var(--green);
 }
 
-/* Default button styles */
-button,.button {
-  padding: var(--spacing-sm) var(--spacing-md);
-  border: none;
-  border-radius: var(--round-sm);
-  font-size: var(--small);
-  font-weight: 700;
-  cursor: pointer;
-  background-color: var(--crimson);
-  color: var(--snow);
-  transition: transform 0.3s ease;
-}
-
-button:focus, .button:focus {
-  transform: scale(.98);
-}
-
-button.large {
-    min-width: 120px;
-    min-height: 46px;
-    width: 100%;
-    user-select: none;
-    cursor: pointer;
-    font-weight: 700;
-    padding: 6px 8px;
-    line-height: 22px;
-    text-align: center;
-    font-size: unset;
-}
-
-/* Button transformations */
-.outlined{
-  background-color: var(--snow);
-  color: var(--crimson);
-  border: 1px solid var(--crimson);
-}
-
-.mini  {
-  min-width: 110px;
-  height: 36px;
-  padding: var(--spacing-sm);
-  font-size: var(--tiny);
-  text-align: center;
-}
-
-.secondary {
-  background-color: var(--slate);
-  color: var(--snow);
-}
-
-.warning{
-  background-color: var(--red);
-  color: var(--snow);
-}
-
-/* Disabled button styles */
-.disabled{
-  background-color: var(--light-gray);
-  color: var(--misty);
-  cursor: not-allowed;
-  border: none;
-}
-
-/* Button background color variations */
-.ice {
-  background-color: var(--ice);
-  color: var(--midnight);
-}
-
-.sky {
-  background-color: var(--sky);
-  color: var(--midnight);
-}
-
-.sun {
-  background-color: var(--sun);
-  color: var(--midnight);
-}
-
-.aqua {
-  background-color: var(--aqua);
-  color: var(--midnight);
-}
-
-.azure {
-  background-color: var(--azure);
-  color: var(--snow);
-}
-
-.blue {
-  background-color: var(--blue);
-  color: var(--snow);
-}
-
-.steel {
-  background-color: var(--steel);
-  color: var(--snow);
-}
-
-.red {
-  background-color: var(--red);
-  color: var(--snow);
-}
-
-.royal {
-  background-color: var(--royal);
-  color: var(--snow);
-}
-
-.dark {
-  background-color: var(--dark);
-  color: var(--snow);
-}
-
-/* Button text color variations */
-.pearl {
-  color: var(--pearl);
-}
-
-.frosty {
-  color: var(--frosty);
-}
-
-.misty {
-  color: var(--misty);
-}
-
-.coal {
-  color: var(--coal);
-}
-
-.midnight {
-  color: var(--midnight);
-}
-
-.snow {
-  color: var(--snow);
-}
-
 
 /* Centering elements */
 .center {
@@ -544,37 +426,7 @@ button.large {
   overflow-y: auto;
 }
 
-/* Box classes */
-.box {
-  max-width: 350px;
-  min-width: 350px;
-  height: auto;
-  margin: var(--spacing-md) auto;
-  padding: var(--spacing-md);
-  background-color: var(--snow);
-  border-radius: var(--round-md);
-}
 
-.box.small {
-  width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
-  max-height: 378px;
-
-}
-
-.box.medium {
-  width: calc(150% - 3rem);
-  height: calc(150% - 3rem);
-}
-
-.box-large {
-  min-width: 420px !important;
-}
-
-.box.huge {
-  width: calc(250% - 5rem);
-  height: calc(250% - 5rem);
-}
 
 /* Additional utility classes */
 .full {
@@ -710,41 +562,6 @@ button.large {
   color: var(--midnight);
 }
 
-/* Input */
-.input {
-  width: 100%;
-  padding: var(--spacing-sm);
-  border: 1px solid var(--light-gray);
-  font-size: var(--small);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: var(--noir);
-  color: var(--midnight);
-  caret-color: var(--crimson);
-}
-
-.input:focus {
-  outline: none;
-}
-
-.radio {
-  width:30px;
-  height: 30px;
-}
-
-/* Select */
-.select {
-  width: 100%;
-  padding: var(--spacing-sm);
-  border: 1px solid var(--light-gray);
-  font-size: var(--small);
-  color: var(--midnight);
-  background-color: var(--noir);
-
-}
-
-.select:focus {
-  outline: none;
-}
 
 
 .divider {
