@@ -1,5 +1,5 @@
 var express = require("express");
-const db = require("/public/javascripts/db");
+const db = require("../../public/javascripts/db");
 var router = express.Router();
 var crypto = require("node:crypto");
 var bcrypt = require("bcrypt");

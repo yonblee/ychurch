@@ -41,3 +41,7 @@ const currentYear = (new Date()).getFullYear();
 const range = (start, stop, step) => Array.from({ length: (stop - start) / step + 1}, (_, i) => start + (i * step));
 console.log(range(currentYear, currentYear - 50, -1)); 
 // [2019, 2018, 2017, 2016, ..., 1969]
+
+// Simple and gets the job done. – 
+Array.from({ length: 51 }, (_, i) => new Date().getFullYear() - i);
+new Date().getFullYear()
