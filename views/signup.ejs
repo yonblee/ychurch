@@ -1,0 +1,58 @@
+<%- include("./partial/head") %>
+
+    <body class="column">
+        <header class="row small-padding">
+            <a href="/" class="logo">yChurch</a>
+            <a href="/supports" class="move-right bold"> Feedback and Help </a>
+        </header>
+        <main class="max center">
+            <form action="/signup" method="post" class="box margin-bottom">
+                <h2 class="huge align-center margin-bottom">Sign up</h2>
+
+                <label for="fullname" class="label">What's your full name?</label>
+                <input type="text" name="fullname" id="fullname" placeholder="Enter Full name" required
+                class="input">
+                <span class="space small"></span>
+
+                <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input">
+                <span class="space small"></span>
+
+                <section class="row no-gap">
+                    <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right">
+                    <button class="flat">X</button>
+                </section>
+                <span class="space small"></span>
+                
+                <section class="row no-gap">
+                    <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right">
+                    <button type="button" class="flat" >Send Code</button>
+                </section>
+                <span class="space small"></span>
+
+                <section class="row margin-top">
+                    <input type="checkbox" name="accept" id="accept">
+                    <p>I have read and understood the Terms of Use,
+                        and I agree to them.
+                    </p>
+                </section>
+                
+                <span class="space"></span>
+                <button type="submit" class="large">Register</button>
+            </form>
+            <p>By continuing with an account located in Liberia, 
+                you agree to our Terms of Service and acknowledge 
+                that you have read our Privacy Policy.
+            </p>
+        </main>
+        <footer class="row between padding border-top">
+            <p>&copy; 2024, yChurch</p>
+            <span>
+                <a href="/about/ychurch"  class="link-sm">About Us</a>
+                <a href="/about/ads" class="link-sm">Advertise</a>
+                <a href="/privacy/term" class="link-sm">Terms</a>
+                <a href="/privacy" class="link-sm">Privacy</a>
+            </span>
+        </footer>
+        <script type="module" src="/javascripts/register.js"></script>
+    </body>
+    </html>
