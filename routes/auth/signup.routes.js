@@ -5,7 +5,7 @@ var crypto = require("node:crypto");
 var bcrypt = require("bcrypt");
 
 router.get("/", function read(req, res, next) {
-  res.render("register", { title: "Register" });
+  res.render("signup", { title: "Sign up " });
 });
 
 router.post("/", function create(req, res, next) {

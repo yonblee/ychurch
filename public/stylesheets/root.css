@@ -122,6 +122,18 @@
   color: var(--shadow);
 }
 
+.success {
+  color: var(--green);
+}
+
+.warning {
+  color: var(--yellow);
+}
+
+.black {
+  color: var(--black);
+}
+
 .link-sm {
   color: rgba(22, 24, 35, 0.75);
   font-weight: 600;
@@ -187,6 +199,14 @@
 
 .invalid {
   border-color: var(--red) !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 /* Padding classes */

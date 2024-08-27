@@ -19,33 +19,32 @@
 
                 <section class="row no-gap">
                     <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right">
-                    <button class="flat">X</button>
+                    <button type="button" class="flat">X</button>
                 </section>
+                <h5 class="muted small-line hide" id="validate"> Password must be 8-20 characters. Have letters, numbers and special characters</h5>
                 <span class="space small"></span>
                 
                 <section class="row no-gap">
                     <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right">
-                    <button type="button" class="flat" >Send Code</button>
+                    <button type="button" class="flat"> Send Code </button>
                 </section>
                 <span class="space small"></span>
 
-                <section class="row margin-top">
+                <section class="row ">
                     <input type="checkbox" name="accept" id="accept">
-                    <p>I have read and understood the Terms of Use,
+                    <p class="small-line">
+                        I have read and understood the Terms of Use,
                         and I agree to them.
                     </p>
                 </section>
                 
                 <span class="space"></span>
-                <button type="submit" class="large">Register</button>
+                <button type="submit" class="large" disabled>Register</button>
             </form>
-            <p>By continuing with an account located in Liberia, 
-                you agree to our Terms of Service and acknowledge 
-                that you have read our Privacy Policy.
-            </p>
+            
         </main>
         <footer class="row between padding border-top">
-            <p>&copy; 2024, yChurch</p>
+            <p> &copy; 2024, yChurch </p>
             <span>
                 <a href="/about/ychurch"  class="link-sm">About Us</a>
                 <a href="/about/ads" class="link-sm">Advertise</a>
@@ -53,6 +52,6 @@
                 <a href="/privacy" class="link-sm">Privacy</a>
             </span>
         </footer>
-        <script type="module" src="/javascripts/register.js"></script>
+        <script type="module" src="/javascripts/signup.js"></script>
     </body>
     </html>
