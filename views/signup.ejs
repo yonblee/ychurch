@@ -15,12 +15,15 @@
                 <span class="space small"></span>
 
                 <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input">
+                <!-- <small class="error" id="hint">An account already use this email. Try another one.</small> -->
                 <span class="space small"></span>
 
                 <section class="row no-gap">
                     <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right">
                     <button type="button" class="flat" id="send"> Send Code </button>
                 </section>
+                <small class="muted hide" id="hint">Click send code to recieve a 6-digit verification code.</small>
+
                 <span class="space small"></span>
 
                 <section class="row no-gap">
@@ -42,7 +45,7 @@
                 </section>
                 
                 <span class="space"></span>
-                <button type="submit" class="large" disabled>Register</button>
+                <button type="submit" class="large" id="submit" disabled>Register</button>
             </form>
             
         </main>
