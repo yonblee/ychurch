@@ -18,18 +18,21 @@
                 <span class="space small"></span>
 
                 <section class="row no-gap">
-                    <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right">
-                    <button type="button" class="flat">X</button>
-                </section>
-                <h5 class="muted small-line hide" id="validate"> Password must be 8-20 characters. Have letters, numbers and special characters</h5>
-                <span class="space small"></span>
-                
-                <section class="row no-gap">
                     <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right">
-                    <button type="button" class="flat"> Send Code </button>
+                    <button type="button" class="flat" id="send"> Send Code </button>
                 </section>
                 <span class="space small"></span>
 
+                <section class="row no-gap">
+                    <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right">
+                    <button type="button" class="flat" id="toggler">&#x1F441;</button>
+                </section>
+                <span class="muted small-line hide" id="validator"> 
+                    <small class="" id="length">Password must be 8-20 characters</small>. 
+                    <small class="" id="chars">Have letters, numbers and special characters</small>
+                </span>
+                <span class="space small"></span>
+                
                 <section class="row ">
                     <input type="checkbox" name="accept" id="accept">
                     <p class="small-line">
