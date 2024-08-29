@@ -3,11 +3,9 @@ const db = require("../../public/javascripts/db");
 var router = express.Router();
 var crypto = require("node:crypto");
 var bcrypt = require("bcrypt");
-var helpers = require("../../public/javascripts/helpers")
 
 router.get("/", function read(req, res, next) {
-  helpers.greet()
-  res.render("signup", { title: "Sign up ", helpers});
+  res.render("signup", { title: "Sign up "});
 });
 
 router.post("/", function create(req, res, next) {
@@ -17,9 +15,8 @@ router.post("/", function create(req, res, next) {
  let UUID = crypto.randomBytes(8).toString("hex").toUpperCase()
  let {fullname, contact, password} = req.body 
  const hashed = bcrypt.hashSync(password, 10)
-//  console.log(bcrypt.compareSync("12341234", hashed))
 
-    db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,contact,hashed], (err)=>{
+ db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,contact,hashed], (err)=>{
       if(err) {
         next(err)
       } else {

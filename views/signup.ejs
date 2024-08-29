@@ -1,12 +1,9 @@
 <%- include("./partial/head") %>
 
     <body class="column">
-        <header class="row padding border-bottom">
-            <a href="/" class="logo">yChurch</a>
-            <a href="/supports" class="move-right bold"> Feedback and Help </a>
-        </header>
+        <%- include("./auth/head") %>
         <main class="max center">
-            <form action="/signup" method="post" class="box margin-bottom" autocomplete="off">
+            <form action="/signup" method="post" class="box" autocomplete="off">
                 <h2 class="huge align-center margin-bottom">Sign up</h2>
 
                 <label for="fullname" class="label">What's your full name?</label>
@@ -34,6 +31,7 @@
                     <small class="" id="length"> Password must be 8-20 characters </small>. 
                     <small class="" id="chars"> Have letters, numbers and special characters </small>
                 </span>
+                
                 <span class="space small"></span>
                 <label class="checkbox small-line"> 
                     I have read and understood the <a href="about/terms" class="small">Terms of Use </a>, and I agree to them.
@@ -46,15 +44,7 @@
             </form>
             <section class="center-align margin-bottom">Already have an account? <a href="/login">Log in</a></section>
         </main>
-        <footer class="row between padding border-top">
-            <p> &copy; 2024, yChurch </p>
-            <span>
-                <a href="/about/ychurch"  class="link-sm">About Us</a>
-                <a href="/about/ads" class="link-sm">Advertise</a>
-                <a href="/privacy/term" class="link-sm">Terms</a>
-                <a href="/privacy" class="link-sm">Privacy</a>
-            </span>
-        </footer>
+        <%- include("./auth/foot") %>
         <script type="module" src="/javascripts/signup.js"></script>
     </body>
     </html>
