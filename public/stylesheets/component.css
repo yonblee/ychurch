@@ -350,8 +350,10 @@ button.flat:disabled {
 }
 
 input:autofill {
-  -webkit-text-fill-color: var(--midnight)
+  -webkit-text-fill-color: var(--midnight);
+  box-shadow: 0 0 0 50px var(--ash) inset;
 }
+
 
 /* Select */
 .select {

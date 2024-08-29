@@ -51,7 +51,7 @@
   --frost-border: var(--frost);
   --light-gray: rgba(22, 24, 35, 0.12);
   /* --light-gray: #e3e3e5; */
-  --ash: #e3e3e5;
+  --ash: rgb(227, 227, 229);
   --light-red: rgba(255, 119, 146, 0.50);
   --rose-border: var(--rose);
   --fog: rgba(22, 24, 35, 0.122);
