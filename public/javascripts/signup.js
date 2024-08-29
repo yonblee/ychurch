@@ -13,7 +13,7 @@ var openEye = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColo
 var closeEye = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"   width="20"  height="18" ><path d="M38.88 41.7a1 1 0 0 0 1.41 0l1.42-1.4a1 1 0 0 0 0-1.42l-3.86-3.86a24.57 24.57 0 0 0 6.27-9.69 1 1 0 0 0 0-.66C41 15.8 32.66 9 23 9c-3.27 0-6.35.73-9.12 2.05L9.12 6.29a1 1 0 0 0-1.41 0L6.29 7.71a1 1 0 0 0 0 1.41l32.59 32.59Zm-22-27.66A17.8 17.8 0 0 1 23 13c12.75 0 17 12 17 12s-1.38 3.9-4.93 7.25l-4.54-4.55A7.99 7.99 0 0 0 23 17c-.95 0-1.86.16-2.7.47l-3.43-3.43ZM1.87 24.67a24.64 24.64 0 0 1 5.8-9.23l2.77 2.78C7.25 21.46 6 25 6 25s4.25 12 17 12a18 18 0 0 0 5.42-.8l3.05 3.05A21.2 21.2 0 0 1 23 41c-9.83 0-17.93-6.63-21.13-15.67a1 1 0 0 1 0-.66Z" fill="#161823"></path><path d="M15 25c0-.68.08-1.35.24-1.98l9.74 9.73A8.02 8.02 0 0 1 15 25Z" fill="#161823"></path></svg>`
 
 window.addEventListener("DOMContentLoaded", function () {
-    toggler.innerHTML = openEye
+    toggler.innerHTML = openEye;
 })
 
 fullname.addEventListener("input", function () {
@@ -22,7 +22,6 @@ fullname.addEventListener("input", function () {
 code.addEventListener("input", function () {
     onlyNum(code)
 })
-
 
 toggler.addEventListener("click", function (evt) {
     if(password.type === "password") {
