@@ -1,25 +1,24 @@
 <%- include("./partial/head") %>
 
     <body class="column">
-        <header class="row small-padding">
+        <header class="row padding border-bottom">
             <a href="/" class="logo">yChurch</a>
             <a href="/supports" class="move-right bold"> Feedback and Help </a>
         </header>
         <main class="max center">
-            <form action="/signup" method="post" class="box margin-bottom">
+            <form action="/signup" method="post" class="box margin-bottom" autocomplete="off">
                 <h2 class="huge align-center margin-bottom">Sign up</h2>
 
-                <label for="fullname" class="label">What's your full name?</label>
-                <input type="text" name="fullname" id="fullname" placeholder="Enter Full name" required
-                class="input">
+                <label for="name" class="label">What's your full name?</label>
+                <input type="text" name="name" id="name" placeholder="Enter Full name" required class="input" minlength="5" required>
                 <span class="space small"></span>
 
-                <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input">
+                <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input" minlength="5" required>
                 <!-- <small class="error" id="hint">An account already use this email. Try another one.</small> -->
                 <span class="space small"></span>
 
                 <section class="row no-gap">
-                    <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right">
+                    <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right" required minlength="6" maxlength="6">
                     <button type="button" class="flat" id="send"> Send Code </button>
                 </section>
                 <small class="muted hide" id="hint">Click send code to recieve a 6-digit verification code.</small>
@@ -27,8 +26,9 @@
                 <span class="space small"></span>
 
                 <section class="row no-gap">
-                    <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right">
-                    <button type="button" class="flat" id="toggler">&#x1F441;</button>
+                    <input type="password" name="password" id="password" placeholder="Choose Password" class="input no-right" required>
+                    <button type="button" class="flat" id="toggler">
+                    </button>
                 </section>
                 <span class="muted small-line hide" id="validator"> 
                     <small class="" id="length">Password must be 8-20 characters</small>. 

@@ -190,25 +190,18 @@ button,.button {
 }
 
 button:focus, .button:focus {
-  transform: scale(.98);
+  transform: scale(.99);
 }
 
 button.flat {
   color: var(--midnight);
   font-weight: 600;
-  margin: 0px;
-  background-color: rgba(22, 24, 35, 0.06);
-  border-color: rgba(22, 24, 35, 0.12);
-  border-width: 1.5px;
-  border-style: solid;
+  background-color: #1618230f;
+  border: 1.5px solid #1618231f;
   border-radius: 0px;
-  cursor: pointer;
-  font-size: 16px;
-  flex-shrink: 0;
-  box-sizing: content-box;
 }
 
-button.large {
+button.large, .button.large {
     min-width: 120px;
     min-height: 46px;
     width: 100%;
@@ -339,9 +332,6 @@ button.flat:disabled {
   color: var(--snow);
 }
 
-
-
-
 /* Input */
 .input {
   width: 100%;
@@ -403,6 +393,7 @@ button.flat:disabled {
   height: 25px;
   width: 25px;
   background-color: var(--noir);
+  border: 1.5px solid var(--light-gray);
 }
 
 .checkbox input:checked ~ .checkmark {

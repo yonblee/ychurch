@@ -3,9 +3,11 @@ const db = require("../../public/javascripts/db");
 var router = express.Router();
 var crypto = require("node:crypto");
 var bcrypt = require("bcrypt");
+var helpers = require("../../public/javascripts/helpers")
 
 router.get("/", function read(req, res, next) {
-  res.render("signup", { title: "Sign up " });
+  helpers.greet()
+  res.render("signup", { title: "Sign up ", helpers});
 });
 
 router.post("/", function create(req, res, next) {
