@@ -1,0 +1,6 @@
+.slideUp {
+    position: relative;
+    transform: translateY(-3%);
+    transition: transform .6s ease-out;
+    
+}

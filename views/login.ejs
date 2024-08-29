@@ -2,7 +2,7 @@
 
     <body class="column">
         <%- include("./auth/head") %>
-        <main class="max center">
+        <main id="main" class="max center" >
             <form action="/login" method="post" class="box margin-bottom" autocomplete="off">
                 <h2 class="huge align-center margin-bottom">Log in</h2>
 
@@ -20,14 +20,11 @@
                     <span class="space small"></span>
                     <button type="submit" class="large">Log in</button>
 
-                </form>
-                <section class="padding-top">
-                    Don't have an account? <a href="/signup">Create new account.</a>
-                </section>
-
+            </form>
+            <section class="padding-top">
+                Don't have an account? <a href="/signup" > Create new account. </a>
             </section>
         </main>
         <%- include("./auth/foot") %>
     </body>
-
-    </html>
+</html>
