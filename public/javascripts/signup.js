@@ -66,7 +66,7 @@ code.addEventListener("input", function () {
 
 send.addEventListener("click", function () {
     send.disabled = true
-    let count = 59, timer = setInterval(() => {
+    let count = 60, timer = setInterval(() => {
         send.textContent = `Resend Code: ${count-- - 1}s`
         if(count == 0) {
             clearInterval(timer)
