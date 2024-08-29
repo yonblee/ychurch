@@ -5,8 +5,8 @@ var toggler = getById("toggler")
 var send = getById("send")
 var code = getById("code")
 var submit = getById("submit")
+var fullname = getById("fullname")
 var specialChars = ["!","@","#","$","%","^","&","*","(",")","_","-","+","|","<",">","[","]","{","}"];
-
 
 var openEye = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"   width="20"  height="18" ><path d="M41.4 23.71a.9.9 0 0 1 0 .58c-.63 1.92-2.2 4.89-4.82 7.51A17.35 17.35 0 0 1 24 37.11c-5.42 0-9.55-2.28-12.58-5.3a20.44 20.44 0 0 1-4.82-7.52.9.9 0 0 1 0-.58c.63-1.92 2.2-4.89 4.82-7.51A17.35 17.35 0 0 1 24 10.89c5.42 0 9.55 2.28 12.58 5.3a20.44 20.44 0 0 1 4.82 7.52ZM24 41c13.83 0 20.82-11.7 21.96-16.81a.85.85 0 0 0 0-.38C44.82 18.71 37.83 7 24 7S3.18 18.7 2.04 23.81a.85.85 0 0 0 0 .38C3.18 29.29 10.17 41 24 41Z" fill="#161823"></path><path d="M24 27.21a3.21 3.21 0 1 1 0-6.42 3.21 3.21 0 0 1 0 6.42Zm0 4.29a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15Z" fill="#161823"></path></svg>`
 
@@ -15,6 +15,14 @@ var closeEye = `<svg xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentCol
 window.addEventListener("DOMContentLoaded", function () {
     toggler.innerHTML = openEye
 })
+
+fullname.addEventListener("input", function () {
+    onlyAlpha(fullname)
+})
+code.addEventListener("input", function () {
+    onlyNum(code)
+})
+
 
 toggler.addEventListener("click", function (evt) {
     if(password.type === "password") {
@@ -95,4 +103,15 @@ function show(elemId) {
         elem.classList.remove("hide")
         elem.classList.add("show")
     }
+}
+
+function onlyAlpha(elem) {
+    let regex = /[^a-zA-Z. \s]+/;
+    elem.value = elem.value.replace(regex, '')
+
+}
+function onlyNum(elem) {
+    let regex = /[^0-9\s]+/;
+    elem.value = elem.value.replace(regex, '')
+
 }
