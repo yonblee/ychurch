@@ -19,11 +19,11 @@ router.post("/", function create(req, res, next) {
  const hashed = bcrypt.hashSync(password, 10)
 //  console.log(bcrypt.compareSync("12341234", hashed))
 
-    db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,contact,hashed], function cb(err){
+    db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,contact,hashed], (err)=>{
       if(err) {
-        res.status(500).json({error:err})
+        next(err)
       } else {
-        console.log("new user created")
+        res.redirect("/login")
       }
     })
 });
