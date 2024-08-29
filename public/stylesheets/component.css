@@ -333,6 +333,7 @@ button.flat:disabled {
 }
 
 /* Input */
+
 .input {
   width: 100%;
   padding: var(--spacing-sm);
@@ -348,9 +349,8 @@ button.flat:disabled {
   outline: none;
 }
 
-.radio {
-  width:30px;
-  height: 30px;
+input:autofill {
+  -webkit-text-fill-color: var(--midnight)
 }
 
 /* Select */
@@ -366,6 +366,11 @@ button.flat:disabled {
 
 .select:focus {
   outline: none;
+}
+
+.radio {
+  width:30px;
+  height: 30px;
 }
 
 .checkbox {
@@ -406,12 +411,10 @@ button.flat:disabled {
   display: none;
 }
 
-/* Show the checkmark when checked */
 .checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .checkbox .checkmark:after {
   left: 7px;
   top: 0;
