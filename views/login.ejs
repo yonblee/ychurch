@@ -1,34 +1,27 @@
 <%- include("./partial/head") %>
 
     <body class="column">
-        <header class="row padding align border-bottom">
-            <span class="max">
-                <a href="/" class="logo text">yChurch</a>
-            </span>
-            <span class="row linklist">
-                <a href="/login">Login</a>
-                <a href="/signup">Register</a>
-                <a href="/hep">Help</a>
-            </span>
+        <header class="row padding border-bottom">
+            <a href="/" class="logo">yChurch</a>
+            <a href="/supports" class="move-right bold"> Feedback and Help </a>
         </header>
-        <main class="max column center">
-            <section class="box mini border small-round padding">
-                <h2 class="margin-bottom">Log in</h2>
+        <main class="max center">
+            <form action="/login" method="post" class="box margin-bottom" autocomplete="off">
+                <h2 class="huge align-center margin-bottom">Log in</h2>
 
-                <small class="padding-bottom">
-                    To log in, fill in the form with the email and password associated with your account.
-                </small>
-
-                <form action="" method="post" class="border-top margin-top">
-
-                    <label for="email" class="label">Fill in the form</label>
-                    <input type="email" name="email" id="email" placeholder="Enter Email" class="input">
-
-                    <div class="space"></div>
-                    <input type="password" name="password" id="password" placeholder="Enter password" class="input">
+                    <label for="email" class="label">What's your email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="input" required>
+                    <span class="space small"></span>
+                    
+                    <label for="password" class="label">Password</label>
+                    <section class="row no-gap">
+                        <input type="password" name="password" id="password" placeholder="Enter Password" class="input no-right" required>
+                        <button type="button" class="flat" id="toggler">X</button>
+                    </section>
                     <a href="account/find">Forget your password?</a>
 
-                    <button type="submit" class="button">Log in</button>
+                    <span class="space smal"></span>
+                    <button type="submit" >Log in</button>
 
                 </form>
                 <section class="padding-top">
@@ -37,15 +30,14 @@
 
             </section>
         </main>
-        <footer class="padding center-align border-top">
-            <span class="linklist">
-                <a href="/about/ychurch">About Us</a>
-                <a href="/about/ads">Advertise</a>
-                <a href="/privacy/term">Terms</a>
-                <a href="/privacy">Privacy</a>
+        <footer class="row between padding border-top">
+            <p> &copy; 2024, yChurch </p>
+            <span>
+                <a href="/about/ychurch"  class="link-sm">About Us</a>
+                <a href="/about/ads" class="link-sm">Advertise</a>
+                <a href="/privacy/term" class="link-sm">Terms</a>
+                <a href="/privacy" class="link-sm">Privacy</a>
             </span>
-            <p>a Timothy T. Joe production</p>
-            <p>&copy; 2024</p>
         </footer>
     </body>
 
