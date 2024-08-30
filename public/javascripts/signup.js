@@ -73,6 +73,7 @@ code.addEventListener("input", function () {
 
 send.addEventListener("click", function () {
     send.disabled = true
+    //add count down to button
     let count = 60, timer = setInterval(() => {
         send.textContent = `Resend Code: ${count-- - 1}s`
         if(count == 0) {
@@ -114,3 +115,4 @@ function onlyNum(elem) {
     elem.value = elem.value.replace(regex, '')
 
 }
+

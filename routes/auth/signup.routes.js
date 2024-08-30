@@ -23,8 +23,8 @@ router.post("/", function create(req, res, next) {
     })
 });
 
-router.post("/verify", (req,res) => {
-  console.log(req.body)
+router.get("/verify", (req,res) => {
+  res.send("verification working")
 })
 
 module.exports = router;

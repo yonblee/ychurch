@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "target": "ES2020",
-    "jsx": "react",
-    "allowImportingTsExtensions": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true
+    "baseUrl": ".",          // Set the base URL to the root of your project
+    "paths": {
+      "*": ["node_modules/*"],  // Allow importing from node_modules seamlessly
+      "@/": ["public/"],        // Alias for the public folder
+      "@js/*": ["public/javascripts/*"], // Example alias for JavaScript files within the public folder
+      "@css/*": ["public/stylesheets/*"] // Example alias for CSS files within the public folder
+    }
   },
-  "exclude": ["node_modules", "**/node_modules/*"]
+  "include": ["./**/*"],     // Include all files in the project
+  "exclude": ["node_modules"] // Exclude node_modules from being transpiled
 }

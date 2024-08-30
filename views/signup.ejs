@@ -10,14 +10,14 @@
                 <input type="text" name="fullname" id="fullname" placeholder="Enter Full Name" required class="input" minlength="5" required autofocus tabindex="1">
                 <span class="space small"></span>
 
-                <input type="email" name="contact" id="contact" placeholder="Enter Email" required class="input" minlength="5" required tabindex="2">
-                <!-- <small class="error" id="hint">An account already use this email. Try another one.</small> -->
+                <input type="email" name="email" id="email" placeholder="Enter Email" required class="input" minlength="5" required tabindex="2">
                 <span class="space small"></span>
 
                 <section class="row no-gap">
                     <input type="text" name="code" id="code" placeholder="Enter 6-digit code" class="input max no-right" required minlength="6" maxlength="6" tabindex="3">
                     <button type="button" class="flat" id="send" tabindex="4"> Send Code </button>
                 </section>
+
                 <small class="muted hide" id="hint">Click send code to recieve a 6-digit verification code.</small>
 
                 <span class="space small"></span>
@@ -27,6 +27,7 @@
                     <button type="button" class="flat" id="toggler" tabindex="6">
                     </button>
                 </section>
+
                 <span class="muted small-line hide" id="validator"> 
                     <small class="" id="length"> Password must be 8-20 characters </small>. 
                     <small class="" id="chars"> Have letters, numbers and special characters </small>
@@ -46,5 +47,6 @@
         </main>
         <%- include("./auth/foot") %>
         <script type="module" src="/javascripts/signup.js"></script>
+        <script type="module" src="/javascripts/verify.js"></script>
     </body>
     </html>
