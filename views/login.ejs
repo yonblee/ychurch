@@ -7,14 +7,19 @@
                 <h2 class="huge align-center margin-bottom">Log in</h2>
 
                     <label for="email" class="label">What's your email</label>
-                    <input type="email" name="email" id="email" placeholder="Enter Email" class="input" required>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" class="input" value="<%= locals?.email %>" required>
                     <span class="space small"></span>
-                    
+
                     <label for="password" class="label">Password</label>
                     <section class="row no-gap">
-                        <input type="password" name="password" id="password" placeholder="Enter Password" class="input no-right" required>
+                        <input type="password" name="password" id="password" placeholder="Enter Password" class="input no-right" value="<%= locals?.password %>" required>
                         <button type="button" class="flat" id="toggler">X</button>
                     </section>
+                    
+                    <% if (locals.error) { %>
+                        <small class="error" id="hint"><%= locals.error %></small>
+                    <% } %>
+
                     <a href="auth/find">Forget your password?</a>
 
                     <span class="space small"></span>

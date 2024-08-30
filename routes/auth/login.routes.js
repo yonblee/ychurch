@@ -9,12 +9,16 @@ router.get("/", function (req, res, next) {
 
 router.post("/", function (req, res, next) {
   let {email,password} = req.body
-  sqlite.all("SELECT * FROM users WHERE contact=?", [email], (err, rows) => {
+  sqlite.all("SELECT * FROM users WHERE email=?", [email], (err, rows) => {
     console.log(rows)
      if(bcrypt.compareSync(password, rows[0].password)){
       res.redirect("/dash")
      } else {
-      console.error("Incorrect password or username.")
+      res.locals.error = "Email or password is incorrect"
+      res.locals.email = email
+      res.locals.password = password
+
+      res.render("login", {title: "Log in"});
      }
   })
 });
