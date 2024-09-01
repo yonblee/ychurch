@@ -1,13 +1,22 @@
-var email = document.getElementById("email")
-var send = document.getElementById("send")
 var api_url = "http://localhost:5500"
-var xml = XMLHttpRequest
 
-send.addEventListener("click", (ev)=>{
-   let address = email.value
-   if(address) {
-    console.log("email is not emapty")
+$("#email").on("blur", function () {
+   let email = $("#email").val();
+   if(email) {
+      $.ajax({
+         url: "/auth/email",
+         type: "POST",
+         dataType: "json",
+         data: {email},
+         complete: () => {console.log("process complete.")},
+         success: (data) => {
+            if(data.email !== null) {
+               $(`<small class="error bold">Email already have an account.</small>`).insertAfter("#email")
+            } 
+         },
+         error: (err) => {console.log(err)}
+      })
    } else {
-    email.insertAdjacentHTML("afterend",  `<small class="error">Please provide an email</small>`)
+      $(`<small class="error bold">Email cannot be blank.</small>`).insertAfter("#email")
    }
 })

@@ -1,6 +1,6 @@
 var express = require("express");
-const sqlite = require("../../sqlite");
 var bcrypt = require("bcrypt");
+const db = require("@js/db");
 var router = express.Router();
 
 router.get("/", function (req, res, next) {

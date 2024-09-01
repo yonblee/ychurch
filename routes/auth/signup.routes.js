@@ -1,8 +1,8 @@
 var express = require("express");
-const db = require("../../public/javascripts/db");
 var router = express.Router();
 var crypto = require("node:crypto");
 var bcrypt = require("bcrypt");
+const db = require("@js/db");
 
 router.get("/", function read(req, res, next) {
   res.render("signup", { title: "Sign up "});
