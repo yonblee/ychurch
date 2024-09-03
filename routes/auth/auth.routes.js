@@ -4,11 +4,9 @@ var db = require("@js/db");
 router.post("/email", function (req, res, next) {
     let {email} = req.body;
     let data = {}
-    console.log(req.body);
     db.all("SELECT email FROM users WHERE email=?", [email], function (err, rows) {
         if(err) console.error(err);
         if(rows.length !== 0) {
-            console.log(rows);
             data.email = email;
             res.json(data);
         } else {
@@ -25,22 +23,19 @@ router.post("/code", function (req, res, next) {
     code.time = new Date()
     req.session.code = code 
     //TODO: SEND EMAIL USING NODEMAILER
-    console.log(code)
     res.json(code)
 })
 
-router.post("/code/auth", function (req, res, next) {
+router.post("/verify", function (req, res, next) {
     let SIX_MIN = 6*60*1000; //6 mins
     let {code, time, email} = req.body;
-   if(req.session.code.time - new Date(time) < SIX_MIN) {
+    //TODO: SET EXPIRATION CHECK
+    //TODO: SET CODE-TO-EMAIL CHECK
     if(req.session.code.code == code) {
-        res.json({expire: false, validation: true})
+        res.json({expire: false, valid: true, req: req.session.code.code, code })
     } else {
-        res.json({expire: false, validation: false})
+        res.json({expire: false, valid: false, req: req.session.code.code, code})
     }
-} else {
-       res.json({expire: true, validation: false})
-   }
 })
 
 module.exports = router;

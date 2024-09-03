@@ -117,6 +117,7 @@ function onlyNum(elem) {
 
 }
 
+//check if email exist
 $("#email").on("blur", function () {
    let email = $("#email").val();
    if(email) {
@@ -127,13 +128,15 @@ $("#email").on("blur", function () {
          data: {email},
          success: (data) => {
             if(data.email !== null) {
-               $(emailBlankErrMsg).insertAfter("#email")
-            } 
+               $(`<small class="error">Email already have an account.</small>`).insertAfter("#email")
+            } else {
+                $("#email").next("small").remove()
+            }
          },
          error: (err) => {console.log(err)}
       })
    } else {
-      $(``).insertAfter("#email")
+      $(emailBlankErrMsg).insertAfter("#email")
    }
 })
 
@@ -146,6 +149,8 @@ $("#send").on("click", function (){
             data: {email},
             dataType: "json",
             success: function (response) {
+                //TODO: REMOVE CONSOLE LOG
+                //TODO: SHOW HINT UNDER CODE FIELDS
                 console.log(response)
             },
             error: (err) => console.error(err)
@@ -163,11 +168,18 @@ $("#code").on("input", function(ev) {
     if(data.code.length == 6) {
         $.ajax({
             type: "POST",
-            url: "/auth/code/auth",
-            data: {data},
+            url: "/auth/verify",
+            data: data,
             dataType: "json",
             success: function (response) {
-                console.log(response)
+                let {expire, valid} = response
+                if(valid) {
+                    console.log("Validated")
+                    console.log(response)
+                } else {
+                    console.log("Wrong Code")
+                    console.log(response)
+                }
             }
         });
     }
