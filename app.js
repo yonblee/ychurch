@@ -7,18 +7,15 @@ var logger = require('morgan');
 var cors = require("cors")
 var session = require("express-session")
 var SQLiteStore = require("connect-sqlite3")(session)
-const db = require('@js/db');
-const restrict = require('@middleware/restrict');
+var db = require('@js/db');
+var restrict = require('@middleware/restrict');
 var app = express();
-
 
 var indexRouter = require('./routes/index');
 var loginRouter = require("./routes/auth/login.routes")
 var signupRouter = require("./routes/auth/signup.routes")
 var authRouter = require("./routes/auth/auth.routes");
 var churchRouter = require("./routes/church");
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
