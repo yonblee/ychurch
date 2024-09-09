@@ -288,11 +288,6 @@ button.flat:disabled {
   color: var(--snow);
 }
 
-.red {
-  background-color: var(--red);
-  color: var(--snow);
-}
-
 .royal {
   background-color: var(--royal);
   color: var(--snow);

@@ -36,7 +36,6 @@ toggler.addEventListener("click", function (evt) {
 
 password.addEventListener("focus", function() {
         show("validator")
-        
 })
 
 password.addEventListener("blur", function() {
@@ -66,11 +65,8 @@ code.addEventListener("focus", function() {
 code.addEventListener("blur", function() {
     hide("hint")
 })
-code.addEventListener("input", function () {
-    if(code.value.length === 6){
-        submit.disabled = false 
-    }
-})
+
+
 
 send.addEventListener("click", function () {
     send.disabled = true
@@ -128,6 +124,7 @@ $("#email").on("blur", function () {
          data: {email},
          success: (data) => {
             if(data.email !== null) {
+                $("#email").next("small").remove()
                $(`<small class="error">Email already have an account.</small>`).insertAfter("#email")
             } else {
                 $("#email").next("small").remove()
@@ -136,9 +133,12 @@ $("#email").on("blur", function () {
          error: (err) => {console.log(err)}
       })
    } else {
+    $("#email").next("small").remove()
       $(emailBlankErrMsg).insertAfter("#email")
    }
 })
+
+$("#code").prop("disabled", true)
 
 $("#send").on("click", function (){
    let email = $("#email").val();
@@ -150,7 +150,11 @@ $("#send").on("click", function (){
             dataType: "json",
             success: function (response) {
                 //TODO: REMOVE CONSOLE LOG
-                //TODO: SHOW HINT UNDER CODE FIELDS
+                //TODO: SHOW code is sent HINT UNDER CODE FIELDS
+                $("#code").prop("disabled", false)
+                $("#code").prop("focus", true)
+                $("#hint").fadeIn("slow");
+                $("#hint").text("6-digit verification code was sent to your email")
                 console.log(response)
             },
             error: (err) => console.error(err)
@@ -159,6 +163,7 @@ $("#send").on("click", function (){
       $(emailBlankErrMsg).insertAfter("#email")
     }
 });
+
 
 $("#code").on("input", function(ev) { 
     let data = {}
@@ -174,15 +179,28 @@ $("#code").on("input", function(ev) {
             success: function (response) {
                 let {expire, valid} = response
                 if(valid) {
-                    console.log("Validated")
+                    //TODO: remove console log
                     console.log(response)
+                    $("#hint").addClass("success")
+                    $("#hint").removeClass("red")
+                    $("#hint").removeClass("black")
+                    $("#hint").text("Email verification successful.")
+                    $("#code").prop("disabled", true)
+                    $("#send").prop("disabled", true)
+                    $("#submit").prop("disabled", false)
                 } else {
-                    console.log("Wrong Code")
-                    console.log(response)
+                    //TODO: remove verification code from response in the route handler
+                    $("#hint").removeClass("black")
+                    $("#hint").addClass("red")
+                    $("#hint").text("Verification code is incorrect.")
                 }
             }
         });
     }
     
 });
+
+
+
+
 

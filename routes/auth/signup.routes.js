@@ -11,10 +11,10 @@ router.get("/", function read(req, res, next) {
 router.post("/", function create(req, res, next) {
  
  let UUID = crypto.randomBytes(8).toString("hex").toUpperCase()
- let {fullname, contact, password} = req.body 
+ let {fullname, email, password} = req.body 
  const hashed = bcrypt.hashSync(password, 10)
 
- db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,contact,hashed], (err)=>{
+ db.run("INSERT INTO users VALUES(?,?,?,?)", [UUID,fullname,email,hashed], (err)=>{
       if(err) {
         next(err)
       } else {
