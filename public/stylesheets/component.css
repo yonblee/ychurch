@@ -465,6 +465,7 @@ input:autofill {
 .pane > .header {
   min-height: 58px;
   position: relative;
+  cursor: pointer;
 }
 
 .pane > .header .logo {
@@ -486,8 +487,6 @@ input:autofill {
  margin-top: -10px;
  border-radius: var(--round-md);
  background-color: var(--snow);
- padding: var(--spacing-sm);
- gap: var(--spacing-sm);
 }
 
 .tab-link {
@@ -501,14 +500,14 @@ input:autofill {
 }
 
 .tab-link:hover {
-  background-color: var(--ash);
+  background-color: var(--light-gray);
 }
 
 .tab-link .tab-icon {
   display: inline-block;
   width: 28px;
   height: 28px;
-  border: solid red;
+ background-color:  var(--ash);
   overflow: hidden;
   border-radius: 50%;
 }
