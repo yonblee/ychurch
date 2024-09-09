@@ -1,4 +1,4 @@
 const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("./bin/ychurch.db");
+const db = new sqlite3.Database("./ychurch.db");
 
 module.exports = db;
