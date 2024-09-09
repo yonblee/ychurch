@@ -1,9 +1,10 @@
 <%- include("./partial/head") %>
   <body>
     <%- include("./partial/navbar") %>
-    <menu>
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
+    <menu class="row top-align">
+      <%- include("./partial/pane") %>
+      <div class="max border">full</div>
+      <div class="pane border-left">sidebar</div>
     </menu>
   </body>
 </html>

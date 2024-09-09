@@ -456,3 +456,63 @@ input:autofill {
   width: 48px;
   height: 48px;
 }
+
+.pane {
+  width: 320px;
+  height: 93vh;
+}
+
+.pane > .header {
+  min-height: 58px;
+  position: relative;
+}
+
+.pane > .header .logo {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.pane > .header .logo img {
+  width: 100%;
+}
+.drop {
+  position: absolute;
+  min-width: inherit;
+  width: 290px;
+ margin-left: 10px;
+ margin-top: -10px;
+ border-radius: var(--round-md);
+ background-color: var(--snow);
+ padding: var(--spacing-sm);
+ gap: var(--spacing-sm);
+}
+
+.tab-link {
+  padding: var(--spacing-sm);
+  border-radius: var(--round-sm);
+  display: flex;
+  gap: var(--spacing-md);
+  color: var(--midnight);
+  display: flex;
+  align-items: center;
+}
+
+.tab-link:hover {
+  background-color: var(--ash);
+}
+
+.tab-link .tab-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: solid red;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.tab-link .tab-icon > * {
+  width: 100%;
+}
