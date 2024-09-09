@@ -7,13 +7,18 @@ var logger = require('morgan');
 var cors = require("cors")
 var session = require("express-session")
 var SQLiteStore = require("connect-sqlite3")(session)
+const db = require('@js/db');
+const restrict = require('@middleware/restrict');
+var app = express();
+
+
 var indexRouter = require('./routes/index');
 var loginRouter = require("./routes/auth/login.routes")
 var signupRouter = require("./routes/auth/signup.routes")
 var authRouter = require("./routes/auth/auth.routes");
-const db = require('@js/db');
-const restrict = require('@middleware/restrict');
-var app = express();
+var bizRouter = require("./routes/biz/biz.routes");
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,12 +50,12 @@ db.serialize(() => {
 
 });
 
-
 // ROUTES handler
-app.use('/dash', restrict, indexRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/auth', authRouter);
+app.use('/dash', restrict, indexRouter);
+app.use('/biz', restrict, bizRouter);
 
 
 // catch 404 and forward to error handler
