@@ -1,13 +1,7 @@
-
-/* @font-face {
-  font-family: "Fira Sans";
-  src: url("/public/fonts/FiraSans-Regular.ttf");
-} */
-
 /* Set a baseline font size and line height */
 html {
   font-size: 100%; /* 1rem = 16px */
-  line-height: 1.5;
+  line-height: 1.25;
   height: 100%;
 }
 
@@ -113,7 +107,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
   margin: 0;
 }
 

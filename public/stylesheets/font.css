@@ -1,8 +1,9 @@
+
 @font-face {
-    font-family: "Fira Sans";
-    font-style: normal;
-    src: url('../fonts/FiraSans-Regular.ttf');
-    src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+  font-family: "Fira Sans";
+  font-style: Bold;
+  src: url('../fonts/FiraSans-Bold.ttf');
+  src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -11,12 +12,14 @@
     src: url('../fonts/FiraSans-Italic.ttf');
     src: url('../fonts/FiraSans-Italic.ttf') format('truetype');
   }
-@font-face {
+
+  @font-face {
     font-family: "Fira Sans";
-    font-style: Bold;
-    src: url('../fonts/FiraSans-Bold.ttf');
-    src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
-  }
+    font-style: normal;
+    src: url('../fonts/FiraSans-Regular.ttf');
+    src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+}
+
 
 @font-face {
     font-family: "DM Sans";
