@@ -1,0 +1,66 @@
+:root {
+    color-scheme: light dark;
+
+  /* Background colors */
+  --frost: rgba(255, 255, 255, 0.12);
+  --mist: rgba(255, 255, 255, 0.08);
+  --snow: #ffffff;
+  --haze: rgba(255, 255, 255, 0.34);
+  --veil: rgba(255, 255, 255, 0.04);
+  --rose: #ff0050;
+  --slate: rgba(136, 136, 136, 0.50);
+  --crimson: #fe2c55;
+  --ink: rgba(22, 24, 35, 0.122);
+  --charcoal: #1b1b1b;
+  --noir: rgba(22, 24, 35, 0.059);
+  --ink: rgba(22, 24, 35, 0.122);
+
+
+  /* Text colors */
+  --pearl: rgba(255, 255, 255, 0.90);
+  --frosty: rgba(255, 255, 255, 0.75);
+  --misty: rgba(255, 255, 255, 0.50);
+  --cloud: #f6f6f6;
+  --midnight: #161823;
+  --coal: #000000;
+
+
+  /* Fill colors */
+  --ice: #25f4ee;
+  --sky: #cadbf5;
+  --aqua: #20d5ec;
+  --azure: #1da1f2;
+  --blue: #4285f4;
+  --sun: #fbbc04;
+  --green: #34a853;
+  --royal: #0075fa;
+  --dark: #333333;
+  --shadow: rgba(22, 24, 35, 0.6);
+  --smoke: rgba(22, 24, 35, 0.341);
+  --cobalt: #2b5db9;
+  --black: #000000;
+  --blue: #0074D9;
+  --blue-light: #00B7FF;
+  --green: #2ECC40;
+  --yellow: #FFDC00;
+  --red: #FF4136;
+  --red-light: #fa453c4d;
+  --purple: #8b058b;
+
+  /* Border colors */
+  --frost-border: var(--frost);
+  --light-gray: rgba(22, 24, 35, 0.12);
+  /* --light-gray: #e3e3e5; */
+  --ash: rgb(227, 227, 229);
+  --light-red: rgba(255, 119, 146, 0.50);
+  --rose-border: var(--rose);
+  --fog: rgba(22, 24, 35, 0.122);
+  --whisper: rgba(22, 24, 35, 0.031);
+
+    /* Shadows for dark mode */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.5);
+    
+}

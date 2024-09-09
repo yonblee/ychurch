@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Fira Sans";
+    font-style: normal;
+    src: url('../fonts/FiraSans-Regular.ttf');
+    src: url('../fonts/FiraSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-style: italic;
+    src: url('../fonts/FiraSans-Italic.ttf');
+    src: url('../fonts/FiraSans-Italic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: "Fira Sans";
+    font-style: Bold;
+    src: url('../fonts/FiraSans-Bold.ttf');
+    src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: "DM Sans";
+    font-style: normal;
+    src: url('../fonts/DMSans-Regular.ttf');
+    src: url('../fonts/DMSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "DM Sans";
+    font-style: italic;
+    src: url('../fonts/DMSans-Italic.ttf');
+    src: url('../fonts/DMSans-Italic.ttf') format('truetype');
+  }
+@font-face {
+    font-family: "DM Sans";
+    font-style: Bold;
+    src: url('../fonts/DMSans-Bold.ttf');
+    src: url('../fonts/DMSans-Bold.ttf') format('truetype');
+  }
