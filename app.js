@@ -16,7 +16,7 @@ var indexRouter = require('./routes/index');
 var loginRouter = require("./routes/auth/login.routes")
 var signupRouter = require("./routes/auth/signup.routes")
 var authRouter = require("./routes/auth/auth.routes");
-var bizRouter = require("./routes/biz/biz.routes");
+var churchRouter = require("./routes/church");
 
 
 
@@ -55,7 +55,7 @@ app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/auth', authRouter);
 app.use('/dash', restrict, indexRouter);
-app.use('/biz', restrict, bizRouter);
+app.use('/church', restrict, churchRouter);
 
 
 // catch 404 and forward to error handler
