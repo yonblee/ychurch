@@ -3,7 +3,7 @@
     <body class="column">
         <%- include("./auth/head") %>
         <main id="main" class="max center" >
-            <form action="/login" method="post" class="box margin-bottom" autocomplete="off">
+            <form id="form" action="/login" method="post" class="box margin-bottom" autocomplete="off">
                 <h2 class="huge align-center margin-bottom">Log in</h2>
 
                     <label for="email" class="label">What's your email</label>
@@ -31,5 +31,6 @@
             </section>
         </main>
         <%- include("./auth/foot") %>
+        <script type="module" src="/javascripts/login.js"></script>
     </body>
 </html>
