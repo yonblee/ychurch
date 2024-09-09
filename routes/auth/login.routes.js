@@ -12,7 +12,7 @@ router.post("/", function (req, res, next) {
   db.all("SELECT * FROM users WHERE email=?", [email], (err, rows) => {
     console.log(rows[0])
      if(bcrypt.compareSync(password, rows[0].password)){
-      req.session.users = rows[0]
+      req.session.user = rows[0]
       res.locals = rows[0]
       res.redirect("/dash")
      } else {

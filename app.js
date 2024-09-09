@@ -12,6 +12,7 @@ var loginRouter = require("./routes/auth/login.routes")
 var signupRouter = require("./routes/auth/signup.routes")
 var authRouter = require("./routes/auth/auth.routes");
 const db = require('@js/db');
+const restrict = require('@middleware/restrict');
 var app = express();
 
 // view engine setup
@@ -46,7 +47,7 @@ db.serialize(() => {
 
 
 // ROUTES handler
-app.use('/', indexRouter);
+app.use('/dash', restrict, indexRouter);
 app.use('/login', loginRouter);
 app.use('/signup', signupRouter);
 app.use('/auth', authRouter);

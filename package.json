@@ -27,6 +27,7 @@
   "_moduleAliases": {
     "@": "public",
     "@js": "public/javascripts",
-    "@css": "public/stylesheets"
+    "@css": "public/stylesheets",
+    "@middleware": "middleware"
   }
 }
