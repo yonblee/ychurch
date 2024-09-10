@@ -466,6 +466,8 @@ input:autofill {
   height: 68px;
   position: relative;
   cursor: pointer;
+  z-index: 1000;
+  background-color: var(--white);
 }
 
 .pane > .header .logo {
@@ -484,7 +486,7 @@ input:autofill {
   min-width: inherit;
   width: 290px;
   margin-left: 10px;
-  margin-top: 65px;
+  margin-top:67px;
   border-radius: var(--round-md);
   background-color: var(--snow);
 }
