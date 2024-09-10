@@ -459,7 +459,7 @@ input:autofill {
 
 .pane {
   width: 320px;
-  height: 93vh;
+  height: 91vh;
 }
 
 .pane > .header {
@@ -516,4 +516,19 @@ input:autofill {
 
 .tab-link .tab-icon > * {
   width: 100%;
+}
+
+.content {
+  height: 89vh;
+  overflow-x: auto;
+  border: solid red;
+}
+
+.long {
+  min-height: 200vh;
+}
+
+.main {
+  height: 91vh;
+  overflow: hidden;
 }

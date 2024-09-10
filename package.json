@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon -e ejs,js,css,html ./bin/www"
+    "dev": "nodemon -e ejs,js,css,html,json ./bin/www"
   },
   "dependencies": {
-    "@fdaciuk/ajax": "^3.0.4",
-    "@fluentui/react-icons": "^2.0.256",
     "bcrypt": "^5.1.1",
     "connect-sqlite3": "^0.9.15",
     "cookie-parser": "~1.4.4",

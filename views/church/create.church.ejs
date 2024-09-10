@@ -1,0 +1,23 @@
+<%- include("../partial/head") %>
+  <body>
+    <%- include("../partial/navbar") %>
+    <menu class="row top-align main">
+      <%- include("../partial/pane") %>
+      <div class="pane column padding-bottom padding-top">
+        <form action="/" method="post" class="max small-padding">
+          <div class="full border" id="one">one</div>
+          <div class="full border" id="two">two</div>
+          <div class="full border" id="three">three</div>
+        </form>
+        <section class="btngroup row between">
+          <button class="secondary" id="prev">Prev</button>
+          <button class="primary move-right" id="next">Next</button>
+        </section>
+      </div>
+      <div class="max border content">
+        <section class="long">section</section>
+      </div>
+    </menu>
+    <script type="module" src="/javascripts/church.js"></script>
+  </body>
+</html>

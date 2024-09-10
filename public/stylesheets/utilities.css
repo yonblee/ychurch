@@ -208,8 +208,11 @@
 }
 
 /* Roundness classes */
-.round {
+.full-round {
   border-radius: var(--round-full);
+}
+.round {
+  border-radius: 50%;
 }
 
 .small-round {
@@ -394,12 +397,16 @@
 /* Additional utility classes */
 .full {
  min-height: 100%;
+ min-width: 100%;
 } 
 
 .full-view {
   width: 100vw;
   height: 100vh;
 }
+
+.full-height {min-height: 100%;}
+.full-width {min-width: 100%;}
 
 .vw {
   width: 100vh;
