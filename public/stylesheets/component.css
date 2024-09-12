@@ -214,6 +214,10 @@ button.large, .button.large {
     font-size: unset;
 }
 
+button.mid {
+  min-width: 120px;
+}
+
 /* Button transformations */
 .outlined{
   background-color: var(--snow);
