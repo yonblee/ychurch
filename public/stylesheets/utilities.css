@@ -503,6 +503,28 @@
   position: absolute;
 }
 
+.fixed-top {
+  top: 0;
+}
+.fixed-right, .fixed-left, .fixed-top {
+  display: inline-block;
+  width: 300px;
+  border: solid red;
+  height: 99.98vh;
+  position: absolute;
+  right: 0;
+}
+.fixed-left {
+  left: 0;
+}
+
+.fixed-center {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+  border: solid red;
+}
+
 /* Line Height Control */
 .no-line {
   line-height: 1 !important; /* Removes additional line height, making it equal to the font size */
